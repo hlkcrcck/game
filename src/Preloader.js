@@ -508,11 +508,10 @@ BasicGame.Preloader.prototype = {
 	tween = this.game.add.tween(item).to( { y: this.game.height/2-35 }, 2400, Phaser.Easing.Bounce.Out, true);
 	
 	this.game.input.onTap.addOnce(function(){this.state.start('MainMenu');},this);
-
-	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-	//this.scale.pageAlignHorizontally = true;
-	this.scale.pageAlignVertically = true;
-	this.scale.setScreenSize( true );
+	
+	this.game.scale.pageAlignHorizontally = true;
+	this.game.scale.pageAlignVertically = true;
+	this.game.scale.refresh();
 	
     var fullscreen =
       this.add.button(this.game.width-8, this.game.height-8,
