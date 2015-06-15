@@ -509,9 +509,7 @@ BasicGame.Preloader.prototype = {
 	
 	this.game.input.onTap.addOnce(function(){this.state.start('MainMenu');},this);
 	
-	this.game.scale.pageAlignHorizontally = true;
-	this.game.scale.pageAlignVertically = true;
-	this.game.scale.refresh();
+
 	
     var fullscreen =
       this.add.button(this.game.width-8, this.game.height-8,

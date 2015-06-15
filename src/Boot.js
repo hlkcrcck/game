@@ -54,6 +54,10 @@ BasicGame.Boot.prototype = {
   },
 
   preload: function() {
+	this.game.scale.pageAlignHorizontally = true;
+	this.game.scale.pageAlignVertically = true;
+	this.game.scale.refresh();
+	
     this.load.image('preloader-bar', 'assets/ui/preloader-bar.png');
   },
 
