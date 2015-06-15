@@ -48,15 +48,16 @@ BasicGame.Boot.prototype = {
       this.scale.leaveIncorrectOrientation
         .add(this.leaveIncorrectOrientation, this);
     }
-
+	
+	this.game.scale.pageAlignHorizontally = true;
+	this.game.scale.pageAlignVertically = true;
+	this.game.scale.refresh();
     this.scale.refresh();
 
   },
 
   preload: function() {
-	this.game.scale.pageAlignHorizontally = true;
-	this.game.scale.pageAlignVertically = true;
-	this.game.scale.refresh();
+
 	
     this.load.image('preloader-bar', 'assets/ui/preloader-bar.png');
   },
