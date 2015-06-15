@@ -509,7 +509,11 @@ BasicGame.Preloader.prototype = {
 	
 	this.game.input.onTap.addOnce(function(){this.state.start('MainMenu');},this);
 
-
+	this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+	//this.scale.pageAlignHorizontally = true;
+	this.scale.pageAlignVertically = true;
+	this.scale.setScreenSize( true );
+	
     var fullscreen =
       this.add.button(this.game.width-8, this.game.height-8,
                       'fullscreen',
